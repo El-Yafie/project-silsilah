@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Keluarga Trah Basuri</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:rgb(206, 236, 255);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #555;
+            margin: 15px 0;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            max-width: 400px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Data Keluarga Trah Basuri</h1>
+
+    <h2>Input Data Keluarga</h2>
+    <form method="post" action="trahbasuri.php">
+        Nama: <input type="text" name="nama" required><br>
+        Tahun Lahir: <input type="number" name="tahun_lahir" required><br>
+        Alamat: <input type="text" name="alamat" required><br>
+        Posisi: <input type="text" name="posisi" required><br>
+        <input type="submit" value="Simpan">
+    </form>
+
+    <h2>Data Keluarga</h2>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Tahun Lahir</th>
+            <th>Alamat</th>
+            <th>Posisi</th>
+        </tr>
+        <?php include 'trahbasuri.php'; ?>
+    </table>
+</div>
+</body>
+</html>
